@@ -1,5 +1,6 @@
 'use strict';
 
+// Monika was here testing the upload as zip
 var Alexa = require('alexa-sdk');
 var constants = require('./constants');
 var stateHandlers = require('./stateHandlers');
