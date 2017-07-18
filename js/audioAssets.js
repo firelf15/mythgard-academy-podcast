@@ -1,14 +1,14 @@
 'use strict';
 
-// Audio Source - AWS Podcast : https://aws.amazon.com/podcasts/aws-podcast/
+// Audio Source - Mythgard Academy Podcast : http://media.signumuniversity.org/mythgardacademy/feed
 var audioData = [
     {
-        'title' : 'Episode 140',
-        'url' : 'https://feeds.soundcloud.com/stream/275202399-amazon-web-services-306355661-amazon-web-services.mp3'
+        'title' : 'MSA001: The Fellowship of the Ring, Lecture 1',
+        'url' : 'http://s3.amazonaws.com/media.mythgardacademy/MSA001_LOTRI/MSA001_Olsen_2012-07-11_Class01_PartI.mp3'
     },
     {
-        'title' : 'Episode 139',
-        'url' : 'https://feeds.soundcloud.com/stream/274166909-amazon-web-services-306355661-aws-podcast-episode-139.mp3'
+        'title' : 'MSA001: The Fellowship of the Ring, Lecture 2',
+        'url' : 'http://s3.amazonaws.com/media.mythgardacademy/MSA001_LOTRI/MSA001_Olsen_2012-07-12_Class02_PartII.mp3'
     }
 ];
 

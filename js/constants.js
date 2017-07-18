@@ -1,13 +1,13 @@
 "use strict";
 
 module.exports = Object.freeze({
-    
-    // App-ID. TODO: set to your own Skill App ID from the developer portal.
-    appId : '',
-    
+
+    // App-ID. DONE: set to your own Skill App ID from the developer portal.
+    appId : ' amzn1.ask.skill.6d49cc8d-99cf-4f4d-ab8a-b138765d6ac5',
+
     //  DynamoDB Table name
     dynamoDBTableName : 'LongFormAudioSample',
-    
+
     /*
      *  States:
      *  START_MODE : Welcome state when the audio list has not begun.
