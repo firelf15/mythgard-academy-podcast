@@ -293,11 +293,11 @@ var controller = function () {
             shuffleOrder((newOrder) => {
                 // Play order have been shuffled. Re-initializing indices and playing first song in shuffled order.
                 this.attributes['playOrder'] = newOrder;
-                this.attributes['index'] = 0;
-                this.attributes['offsetInMilliseconds'] = 0;
-                this.attributes['playbackIndexChanged'] = true;
-                controller.play.call(this);
-            });
+            this.attributes['index'] = 0;
+            this.attributes['offsetInMilliseconds'] = 0;
+            this.attributes['playbackIndexChanged'] = true;
+            controller.play.call(this);
+        });
         },
         shuffleOff: function () {
             // Turn off shuffle play.
