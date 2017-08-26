@@ -14,8 +14,7 @@
   "author": "Amazon.com",
   "license": "See license in ../LICENSE.txt",
   "dependencies": {
-    "alexa-sdk": "^1.0.4",
-    "rss-to-json": "^1.0.2"
+    "alexa-sdk": "^1.0.4"
   },
   "repository" : {
     "type" : "git",
