@@ -1,38 +1,7 @@
-'use strict';
+var promiseRss = require('./promiseRss');
+var url = 'http://media.signumuniversity.org/mythgardacademy/feed';
 
-var Feed = require('rss-to-json');
-var audioItems = [];
-
-// Feed.load('http://media.signumuniversity.org/mythgardacademy/feed', function(err, rss) {
-
-//   var count = Object.keys(rss.items).length;
-//   var http;
-//   var i;
-//   var title;
-//   var url;
-//   for (i = 0; i < count; i++) {
-//     title = rss.items[i].title;
-//     http = rss.items[i].enclosures[0].url;
-//     url = http.replace(/^http:\/\//i, 'https://');
-//     audioItems.push({ title, url });
-//   }
-//   // console.log(audioItems);
-// });
-console.log(audioItems);
-exports.audioData = function() {
-  Feed.load('http://media.signumuniversity.org/mythgardacademy/feed', function(err, rss) {
-
-    var count = Object.keys(rss.items).length;
-    var http;
-    var i;
-    var title;
-    var url;
-    for (i = 0; i < count; i++) {
-      title = rss.items[i].title;
-      http = rss.items[i].enclosures[0].url;
-      url = http.replace(/^http:\/\//i, 'https://');
-      audioItems.push({ title, url });
-    }
-    return audioItems;
-  });
-}
+promiseRss(url).then(function (rss) {
+  console.log(rss);
+  return rss;
+});
