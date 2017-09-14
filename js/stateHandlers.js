@@ -4,6 +4,10 @@ var Alexa = require('alexa-sdk');
 var audioData = require('./audioAssets');
 var constants = require('./constants');
 
+// console.log("charlie: stateHandlers.js");
+console.log("hilo is: " + JSON.stringify(audioData));
+console.log("kachow is: " + audioData);
+
 var stateHandlers = {
     startModeIntentHandlers : Alexa.CreateStateHandler(constants.states.START_MODE, {
         /*
@@ -20,7 +24,7 @@ var stateHandlers = {
             //  Change state to START_MODE
             this.handler.state = constants.states.START_MODE;
 
-            var message = 'Welcome to the Mythgard Academy Podcast. You can say, play the audio to begin the podcast.';
+            var message = 'Mae govannen! Welcome to the Mythgard Academy Podcast. You can say, play the audio to begin the podcast.';
             var reprompt = 'You can say, play the audio, to begin.';
 
             this.response.speak(message).listen(reprompt);
@@ -41,7 +45,7 @@ var stateHandlers = {
             controller.play.call(this);
         },
         'AMAZON.HelpIntent' : function () {
-            var message = 'Welcome to the Mythgard Academy Podcast. You can say, play the audio, to begin the podcast.';
+            var message = 'Mae govannen! Welcome to the Mythgard Academy Podcast. You can say, play the audio, to begin the podcast.';
             this.response.speak(message).listen(message);
             this.emit(':responseReady');
         },
@@ -82,7 +86,7 @@ var stateHandlers = {
             var reprompt;
             if (this.attributes['playbackFinished']) {
                 this.handler.state = constants.states.START_MODE;
-                message = 'Welcome to the Mythgard Academy Podcast. You can say, play the audio to begin the podcast.';
+                message = 'Mae govannen! Welcome to the Mythgard Academy Podcast. You can say, play the audio to begin the podcast.';
                 reprompt = 'You can say, play the audio, to begin.';
             } else {
                 this.handler.state = constants.states.RESUME_DECISION_MODE;

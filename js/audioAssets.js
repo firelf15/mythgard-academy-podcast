@@ -1,7 +1,10 @@
-var promiseRss = require('./promiseRss');
-var url = 'http://media.signumuniversity.org/mythgardacademy/feed';
-
-promiseRss(url).then(function (rss) {
-  console.log(rss);
-  return rss;
+var audioData;
+var promisesPromises = require('./custom_modules/promises-promises').then(function(promisesPromises) {
+  audioData = promisesPromises;
+  console.log("foxtrot is: " + JSON.stringify(audioData));
+  return audioData;
 });
+
+// console.log("foxtrot is: " + audioData);
+// console.log("golf is: " + JSON.stringify(audioData));
+exports.audioData = audioData;

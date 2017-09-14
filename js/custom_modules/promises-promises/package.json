@@ -1,7 +1,7 @@
 {
-  "name": "mythgard-academy-podcast",
+  "name": "promises-promises",
   "version": "1.0.0",
-  "description": "An audio player sample skill.",
+  "description": "Promises to get audio items from a podcast feed for use by the Mythgard Academy Podcast Player.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,13 +11,8 @@
     "skill",
     "audio player"
   ],
-  "author": "Amazon.com",
+  "author": "ms-wit.com",
   "license": "See license in ../LICENSE.txt",
-  "dependencies": {
-    "alexa-sdk": "^1.0.4",
-    "rss-to-json": "1.0.2",
-    "./custom_modules/promises-promises": "1.0.0"
-  },
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/firelf15/mythgard-academy-podcast"
