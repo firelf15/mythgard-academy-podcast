@@ -9,7 +9,7 @@ module.exports = function(feedUrl) {
       if (err) {
         reject(err);
       } else {
-        console.log('alpha: promiseRss.js');
+        // console.log('alpha: promiseRss.js');
         resolve(rss);
       }
     });

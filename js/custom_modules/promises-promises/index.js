@@ -4,7 +4,7 @@ var audioItems = [];
 // var kowabunga;
 
 module.exports = promiseRss(feedUrl).then(function (rss) {
-    console.log("bravo: audioAssets.js");
+    // console.log("bravo: audioAssets.js");
     // console.log(rss);
     return rss;
   }).then(function(rss) {
@@ -19,10 +19,10 @@ module.exports = promiseRss(feedUrl).then(function (rss) {
       url = http.replace(/^http:\/\//i, 'https://');
       audioItems.push({ title, url });
     }
-    console.log("delta: " + audioItems[2]['title']);
+    // console.log("delta: " + audioItems[2]['title']);
     return audioItems;
   }). then(function(audioItems) {
     kowabunga = audioItems;
-    console.log("echo: " + kowabunga[2]['url']);
+    // console.log("echo: " + kowabunga[2]['url']);
     return kowabunga;
   });

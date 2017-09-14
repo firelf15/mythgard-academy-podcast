@@ -1,8 +1,25 @@
 'use strict';
 
 var Alexa = require('alexa-sdk');
-var audioData = require('./audioAssets');
 var constants = require('./constants');
+
+
+
+
+var audioData;
+let myFirstPromise = new Promise((resolve, reject) => {
+  audioData = require('./custom_modules/promises-promises').then(function(promisesPromises) {
+    audioData = promisesPromises;
+    // console.log("hilo is: " + JSON.stringify(audioData));
+    resolve(audioData);
+  });
+});
+
+myFirstPromise.then((audioData) => {
+
+
+
+
 
 // Binding audio handlers to PLAY_MODE State since they are expected only in this mode.
 var audioEventHandlers = Alexa.CreateStateHandler(constants.states.PLAY_MODE, {
@@ -102,3 +119,5 @@ function getOffsetInMilliseconds() {
     // Extracting offsetInMilliseconds received in the request.
     return this.event.request.offsetInMilliseconds;
 }
+
+});

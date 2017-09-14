@@ -1,12 +1,21 @@
 'use strict';
 
 var Alexa = require('alexa-sdk');
-var audioData = require('./audioAssets');
 var constants = require('./constants');
 
-// console.log("charlie: stateHandlers.js");
-console.log("hilo is: " + JSON.stringify(audioData));
-console.log("kachow is: " + audioData);
+var audioData;
+let myFirstPromise = new Promise((resolve, reject) => {
+  audioData = require('./custom_modules/promises-promises').then(function(promisesPromises) {
+    audioData = promisesPromises;
+    // console.log("hilo is: " + JSON.stringify(audioData));
+    resolve(audioData);
+  });
+});
+
+myFirstPromise.then((audioData) => {
+
+// console.log("5th episode is [4] : " + audioData[4]['url']);
+
 
 var stateHandlers = {
     startModeIntentHandlers : Alexa.CreateStateHandler(constants.states.START_MODE, {
@@ -356,4 +365,6 @@ function shuffleOrder(callback) {
         array[randomIndex] = temp;
     }
     callback(array);
-}
+};
+
+});
